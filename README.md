@@ -1,72 +1,47 @@
-AI Crop Advisor
+#  AI Crop Advisor
+A Machine Learning project to recommend the **best crop** for farmers based on soil and weather conditions. It helps farmers make data-driven decisions to improve yield and profit.
 
+## Dataset
 
+Trained on `Crop_recommendation.csv`, which includes:
 
-A machine learning project to recommend the "best crop" for farmers based on soil and weather data.
+- Soil Nutrients: **Nitrogen (N)**, **Phosphorus (P)**, **Potassium (K)**
+- Environmental Features: **Temperature**, **Humidity**, **Soil pH**, **Rainfall**
+- Target Variable: **Recommended Crop**
 
+## Models Used
 
+-  Logistic Regression  
+-  K-Nearest Neighbors (KNN)  
+-  Decision Tree (**Best model**)
 
-Dataset
+The Decision Tree model was chosen based on overall accuracy and stability.
 
-Trained on `Crop\_recommendation.csv`, which includes:
+##  How It Works
 
-\- Nitrogen (N), Phosphorus (P), Potassium (K)
+1. Performs data preprocessing and visual EDA.
+2. Trains and compares multiple models.
+3. Saves the **best model** and **LabelEncoder**.
+4. Takes **user input** through console and gives **crop recommendation**.
 
-\- Temperature, Humidity, pH
+##  Project Structure
 
-\- Rainfall
-
-
-
-&nbsp;Models Used
-
-\- Logistic Regression
-
-\- K-Nearest Neighbors (KNN)
-
-\- Decision Tree ( Best Model)
-
-
-
-How It Works
-
-1\. Trains and compares multiple models.
-
-2\. Saves the best model + label encoder.
-
-3\. Accepts user input and gives crop recommendation.
-
-&nbsp;
-
-Project Structure
-
-AI\_Crop\_Advisor/
-
-├── data/
-
-│   └── Crop\_recommendation.csv
-
-├── models/
-
-│   └── best\_model\_DecisionTree.pkl
-
-│   └── label\_encoder.pkl
-
-├── notebooks/
-
-│   └── data\_preprocessing\_01.ipynb
-
-│   └── Crop\_Advisor\_Model\_Training.ipynb
-
-│   └── Crop\_Advisor\_Predictor.ipynb
-
-├── outputs/
-
-│   └── model\_accuracy\_comparison.png
-
+AI_Crop_Advisor/
+├── data/ # Dataset
+│ └── Crop_recommendation.csv
+│
+├── models/ # Saved models
+│ ├── best_model_DecisionTree.pkl
+│ └── label_encoder.pkl
+│
+├── notebooks/ # Notebooks for EDA, training, and prediction
+│ ├── data_preprocessing_01.ipynb
+│ ├── Crop_Advisor_Model_Training.ipynb
+│ └── Crop_Advisor_Predictor.ipynb
+│
+├── outputs/ # Graphs and comparison reports
+│ └── model_accuracy_comparison.png
+│
+├── .gitignore
 ├── README.md
-
-├── .gitignore        
-
-
-
+└── requirements.txt
